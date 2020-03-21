@@ -6,6 +6,9 @@ import { FetchData } from './pages/FetchData';
 import { Counter } from './pages/Counter';
 import { Deals } from './pages/Deals';
 import { Pizzas } from './pages/Pizzas';
+import { About } from './pages/About';
+import { GiftCards } from './pages/GiftCards';
+
 
 import './custom.css'
 import './index.css'
@@ -22,6 +25,8 @@ export default class App extends Component {
                 <Route path='/counter' component={Counter} />
                 <Route path='/fetch-data' component={FetchData} />
                 <Route path='/pizzas.html' component={Pizzas} />
+                <Route path='/about.html' component={About} />
+                <Route path='/giftcards.html' component={GiftCards} />
             </Layout>
         );
     }

@@ -4,7 +4,10 @@ export class Header extends Component {
     render() {
         return (
             <header>
-                <img src="/images/IMG_Logo_BlankBackground_Toppers.png" alt="Toppers logo" width="220" height="157" />
+                <a href="index.html">
+                    <img src="/images/IMG_Logo_BlankBackground_Toppers.png" alt="Toppers logo"
+                        width= "220" height = "157" />
+                </a>
             </header>
          );
     }

@@ -7,6 +7,7 @@ export class TopLinks extends Component {
                 <div class="menuDropdown">
                     <button class="btnMenuDropdown">Menu</button>
                     <div class="menuDropdownContent">
+                        <a href="index.html">Home</a>
                         <a href="newmenuitems.html">New Menu Items</a>
                         <a href="pizzas.html">Pizzas</a>
                         <a href="topperstix.html">Topperstix</a>
