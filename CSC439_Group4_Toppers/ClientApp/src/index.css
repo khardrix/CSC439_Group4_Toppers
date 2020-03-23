@@ -114,6 +114,7 @@ header img {
     height: auto;
     background-color: black;
     margin-bottom: 0;
+    clear: both;
 }
 
 .socialMediaNav {
@@ -320,4 +321,135 @@ footer {
     font-weight: 800;
 }
 /***************************************** GIFTCARD PAGE CSS: END ***********************************************/
+/****************************************************************************************************************/
+
+
+/****************************************************************************************************************/
+/**************************************** CONTACT PAGE CSS: START **********************************************/
+
+
+/****************************************************************************************************************/
+/************************************** CONTACT PAGE FORM CSS: START ********************************************/
+#frmContainer {
+    width: 40vw;
+    height: 70vw;
+    background-color: black;
+    float: left;
+}
+
+#frmContactUs {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+/******************* FROM HERE TO THE NEXT COMMENT LINE IS ALL COPIED FROM A TUTORIAL ************** 
+.frmContactContactReason {
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.frmContactContactReason select {
+    display: none;
+}
+
+.select-selected {
+    background-color: darkgrey;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 3vw;
+    right: 1.5vw;
+    width: 0;
+    height: 0;
+    border: 1.2vw solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 1.3vw;
+}
+
+.select-items div, .select-selected {
+    color: #ffffff;
+    padding: 1.4vw 2.2vw;
+    border: .2vw solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: darkgrey;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+********************************************************************************************************/
+
+/*          OLD CSS
+.frmContactContactReason label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    font-weight: 700;
+    background-color: gray;
+    color: white;
+    text-align: left;
+}
+*/
+/*         OLD CSS
+.frmContactContactReason select {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    font-weight: 700;
+    background-color: gray;
+    color: white;
+    text-align: left;
+}
+*/
+
+#contactPageContainer {
+    text-align: center;
+    /*display: inline-block;*/
+    margin: 0 auto;
+    width: 100%;
+    /*position: absolute;
+    clear: both;*/
+}
+
+#contactPageContainer h2 {
+    text-align: center;
+}
+
+#frmContainer {
+    float: left;
+    width: 60%;
+    background-color: gray;
+}
+
+#contactInformation {
+    float: right;
+    border: .5vw solid red;
+}
+
+
+
+/*************************************** CONTACT PAGE FORM CSS: END *********************************************/
+/****************************************************************************************************************/
+
+
+/***************************************** CONTACT PAGE CSS: END ***********************************************/
 /****************************************************************************************************************/

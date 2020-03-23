@@ -8,6 +8,7 @@ import { Deals } from './pages/Deals';
 import { Pizzas } from './pages/Pizzas';
 import { About } from './pages/About';
 import { GiftCards } from './pages/GiftCards';
+import { Contact } from './pages/Contact';
 
 
 import './custom.css'
@@ -27,6 +28,7 @@ export default class App extends Component {
                 <Route path='/pizzas.html' component={Pizzas} />
                 <Route path='/about.html' component={About} />
                 <Route path='/giftcards.html' component={GiftCards} />
+                <Route path='/contact.html' component={Contact} />
             </Layout>
         );
     }
