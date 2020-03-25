@@ -30,6 +30,19 @@ export class Contact extends Component {
             this.state.address + ' Apartment Number is: ' + this.state.aptNumber + ' City is: ' +
             this.state.city + ' US State is: ' + this.state.usState + ' Zip Code is: ' + this.state.zipCode +
             ' Message is: ' + this.state.message);
+
+        this.setState({
+            contactReason: "",
+            fullName: "",
+            email: "",
+            phoneNumber: "",
+            address: "",
+            aptNumber: "",
+            city: "",
+            usState: "",
+            zipCode: "",
+            message: "",
+        });
     }
 
     change = (e) => {
