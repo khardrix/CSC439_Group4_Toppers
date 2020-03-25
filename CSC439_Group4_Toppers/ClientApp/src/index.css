@@ -330,30 +330,245 @@ footer {
 
 
 /****************************************************************************************************************/
-/**************************************** CONTACT PAGE CSS: START **********************************************/
+/**************************************** CONTACT PAGE CSS: START ***********************************************/
 
+#contactPageContainer {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
 
-/****************************************************************************************************************/
-/************************************** CONTACT PAGE FORM CSS: START ********************************************/
+    #contactPageContainer h2 {
+        text-align: center;
+    }
+
 #contactPageUnderHeader {
     display: inline-flex;
     margin-bottom: 5vw;
 }
 
+/****************************************************************************************************************/
+/************************************** CONTACT PAGE FORM CSS: START ********************************************/
+
 #frmContainer {
-    width: 25vw;
-    height: 34vw;
+    width: 60%;
+    height: 49vw;
     background-color: black;
     float: left;
     margin-right: 12vw;
 }
 
-#frmContactUs {
-    width: 100%;
-    height: 100%;
-    background-color: black;
+#frmContactContactReasonSelectDiv {
+    width: 90%;
     text-align: center;
+    margin: 0 auto;
 }
+
+#frmContactContactReasonSelectDiv select {
+    width: 100%;
+    text-align: left;
+    height: 3vw;
+}
+
+#frmContactContactReasonSelectDiv label {
+    color: yellow;
+    text-align: left;
+}
+
+#frmContactFullNameDiv {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#frmContactFullNameDiv input {
+    width: 100%;
+    text-align: left;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactFullNameDiv label {
+    color: white;
+    text-align: left;
+}
+
+#frmContactEmail {
+    float: left;
+    margin-right: 5vw;
+    padding-left: 5%;
+    width: 44%;
+}
+
+#frmContactEmail input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactEmail label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactEmail input, label {
+    display: block;
+}
+
+#frmContactPhoneNumber {
+    float: right;
+    padding-right: 5%;
+    width: 44%;
+}
+
+#frmContactPhoneNumber input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactPhoneNumber label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactPhoneNumber input, label {
+    display: block;
+}
+
+#frmContactAddressInput {
+    float: left;
+    margin-right: 5vw;
+    padding-left: 5%;
+    width: 54%;
+}
+
+#frmContactAddressInput input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactAddressInput label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactAddressInput input, label {
+    display: block;
+}
+
+#frmContactAptNumberInput {
+    float: right;
+    padding-right: 5%;
+    width: 34%;
+}
+
+#frmContactAptNumberInput input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactAptNumberInput label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactAptNumberInput input, label {
+    display: block;
+}
+
+#frmContactCityStateZip {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#frmContactCity {
+    float: left;
+    text-align: left;
+    width: 40%;
+}
+
+#frmContactCity input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactCity label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactCity input, label {
+    display: block;
+}
+
+#frmContactStateSelect {
+    display: inline-block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+#frmContactStateSelect select {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactStateSelect label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactStateSelect select, label {
+    display: block;
+}
+
+#frmContactZipCode {
+    float: right;
+    width: 25%;
+}
+
+#frmContactZipCode input {
+    width: 100%;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#frmContactZipCode label {
+    text-align: left;
+    color: white;
+}
+
+#frmContactZipCode input, label {
+    display: block;
+}
+
+#frmContactTextarea {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#frmContactTextarea textarea {
+    width: 100%;
+    text-align: left;
+}
+
+#frmContactTextarea label {
+    color: white;
+    text-align: left;
+}
+
+#frmContactTextarea textarea, label {
+    display: block;
+}
+
+/*************************************** CONTACT PAGE FORM CSS: END *********************************************/
+/****************************************************************************************************************/
 
 #contactInformation {
     height: 20vw;
@@ -376,112 +591,6 @@ footer {
     font-size: large;
     font-weight: 600;
 }
-
-
-/******************* FROM HERE TO THE NEXT COMMENT LINE IS ALL COPIED FROM A TUTORIAL ************** 
-.frmContactContactReason {
-    position: relative;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.frmContactContactReason select {
-    display: none;
-}
-
-.select-selected {
-    background-color: darkgrey;
-}
-
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 3vw;
-    right: 1.5vw;
-    width: 0;
-    height: 0;
-    border: 1.2vw solid transparent;
-    border-color: #fff transparent transparent transparent;
-}
-
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 1.3vw;
-}
-
-.select-items div, .select-selected {
-    color: #ffffff;
-    padding: 1.4vw 2.2vw;
-    border: .2vw solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-}
-
-.select-items {
-    position: absolute;
-    background-color: darkgrey;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-}
-
-.select-hide {
-    display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-********************************************************************************************************/
-    /*          OLD CSS
-.frmContactContactReason label {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
-    font-weight: 700;
-    background-color: gray;
-    color: white;
-    text-align: left;
-}
-*/
-    /*         OLD CSS
-.frmContactContactReason select {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
-    font-weight: 700;
-    background-color: gray;
-    color: white;
-    text-align: left;
-}
-*/
-    #contactPageContainer {
-        text-align: center;
-        /*display: inline-block;*/
-        margin: 0 auto;
-        width: 100%;
-        /*position: absolute;
-    clear: both;*/
-    }
-
-#contactPageContainer h2 {
-    text-align: center;
-}
-
-#frmContainer {
-    float: left;
-    width: 60%;
-    background-color: gray;
-}
-
-#contactInformation {
-    float: right;
-    border: .5vw solid red;
-}
-
-
-
-/*************************************** CONTACT PAGE FORM CSS: END *********************************************/
-/****************************************************************************************************************/
-
 
 /***************************************** CONTACT PAGE CSS: END ***********************************************/
 /****************************************************************************************************************/
