@@ -25,11 +25,29 @@ export class Contact extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        alert('Contact Reason is: ' + this.state.contactReason + ' Full Name is: ' + this.state.fullName +
-            ' Email is: ' + this.state.email + ' Phone Number is: ' + this.state.phoneNumber + ' Address is: ' +
-            this.state.address + ' Apartment Number is: ' + this.state.aptNumber + ' City is: ' +
-            this.state.city + ' US State is: ' + this.state.usState + ' Zip Code is: ' + this.state.zipCode +
-            ' Message is: ' + this.state.message);
+        alert('Contact Reason is: ' + this.state.contactReason + '\nFull Name is: ' + this.state.fullName +
+            '\nEmail is: ' + this.state.email + '\nPhone Number is: ' + this.state.phoneNumber + '\nAddress is: ' +
+            this.state.address + '\nApartment Number is: ' + this.state.aptNumber + '\nCity is: ' +
+            this.state.city + '\nUS State is: ' + this.state.usState + '\nZip Code is: ' + this.state.zipCode +
+            '\nMessage is: ' + this.state.message);
+
+        fetch('http://localhost:44347/send', {
+            method: "POST",
+            body: JSON.stringify(this.state),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(
+            (response) => (response.json())
+        ).then((response) => {
+            if (response.status === 'success') {
+                alert("Message Sent.");
+                this.resetForm()
+            } else if (response.status === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
 
         this.setState({
             contactReason: "",
