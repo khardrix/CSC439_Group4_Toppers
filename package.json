@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "emailjs-com": "^2.4.1"
+  },
+  "dependencies": {
+    "firebase": "^7.12.0",
+    "firebaseui": "^4.5.0",
+    "react-firebaseui": "^4.1.0"
+  }
+}

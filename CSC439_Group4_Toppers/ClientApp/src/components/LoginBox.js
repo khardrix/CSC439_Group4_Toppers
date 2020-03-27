@@ -4,7 +4,7 @@ export class LoginBox extends Component {
     render() {
         return (
             <div id="loginBox">
-                <span>To Do</span>
+                <a href="login.html"><p>Login</p></a>
             </div>
         );
     }

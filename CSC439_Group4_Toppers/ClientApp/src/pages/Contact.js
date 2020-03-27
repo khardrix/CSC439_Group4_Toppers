@@ -1,4 +1,6 @@
 ﻿import React, { Component } from 'react';
+import * as emailjs from 'emailjs-com';
+// import { Button, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 export class Contact extends Component {
@@ -30,7 +32,7 @@ export class Contact extends Component {
             this.state.address + '\nApartment Number is: ' + this.state.aptNumber + '\nCity is: ' +
             this.state.city + '\nUS State is: ' + this.state.usState + '\nZip Code is: ' + this.state.zipCode +
             '\nMessage is: ' + this.state.message);
-
+        /*
         fetch('http://localhost:44347/send', {
             method: "POST",
             body: JSON.stringify(this.state),
@@ -48,7 +50,34 @@ export class Contact extends Component {
                 alert("Message failed to send.")
             }
         })
+        */
 
+        const { contactReason, fullName, email, phoneNumber, address, aptNumber, city, usState, zipCode, message } = this.state;
+
+        let templateParams = {
+            from_name: email,
+            to_name: 'csc439toppers',
+            subject: contactReason,
+            message_html: message,
+        }
+
+        
+
+        
+        emailjs.send(
+            'gmail',
+            'template_2KGbKcIW',
+            templateParams,
+            'user_XQwrhYHyeTJCE66Si2WVK'
+        )
+        
+        /*const templateId = 'template_2KGbKcIW';*/
+        /*this.sendFeedback(templateId, { message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email })*/
+
+        this.resetForm()
+    }
+
+    resetForm() {
         this.setState({
             contactReason: "",
             fullName: "",
@@ -60,7 +89,7 @@ export class Contact extends Component {
             usState: "",
             zipCode: "",
             message: "",
-        });
+        })
     }
 
     change = (e) => {
