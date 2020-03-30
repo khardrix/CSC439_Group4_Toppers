@@ -36,13 +36,15 @@ export class Login extends Component {
             <div id="LoginContainer">
                 {this.state.isSignedIn ? (
                     <span>
-                        <div>Signed In!</div>
-                        <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
                         <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
                         <img
                             alt="profile picture"
                             src={firebase.auth().currentUser.photoURL}
                         />
+                        <br /><br />
+                        <div>
+                            <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+                        </div>
                     </span>
                 ) : (
                         <StyledFirebaseAuth
