@@ -1,4 +1,10 @@
 ﻿import React, { Component } from 'react';
+import ReactDom from 'react-dom';
+
+
+function LoggedIn(props) {
+    const isLoggedIn = props.isSignedIn
+}
 
 export class LoginBox extends Component {
     render() {

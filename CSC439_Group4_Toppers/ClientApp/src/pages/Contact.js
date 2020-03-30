@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react';
-import * as emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 // import { Button, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap';
+// import axios from 'axios';
 
 
 export class Contact extends Component {
@@ -17,11 +18,11 @@ export class Contact extends Component {
             city: "",
             usState: "",
             zipCode: "",
-            message: "",
+            message: ""
         };
 
-        this.onSubmit = this.onSubmit.bind(this);
-        this.change = this.change.bind(this);
+        // this.onSubmit = this.onSubmit.bind(this);
+        // this.change = this.change.bind(this);
     }
 
     onSubmit(e) {
@@ -32,6 +33,10 @@ export class Contact extends Component {
             this.state.address + '\nApartment Number is: ' + this.state.aptNumber + '\nCity is: ' +
             this.state.city + '\nUS State is: ' + this.state.usState + '\nZip Code is: ' + this.state.zipCode +
             '\nMessage is: ' + this.state.message);
+     
+
+        this.resetForm();
+
         /*
         fetch('http://localhost:44347/send', {
             method: "POST",
@@ -51,7 +56,7 @@ export class Contact extends Component {
             }
         })
         */
-
+        /*
         const { contactReason, fullName, email, phoneNumber, address, aptNumber, city, usState, zipCode, message } = this.state;
 
         let templateParams = {
@@ -70,11 +75,23 @@ export class Contact extends Component {
             templateParams,
             'user_XQwrhYHyeTJCE66Si2WVK'
         )
-        
+        */
         /*const templateId = 'template_2KGbKcIW';*/
-        /*this.sendFeedback(templateId, { message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email })*/
-
-        this.resetForm()
+    /*this.sendFeedback(templateId, { message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email })*/
+        /*
+        axios({
+            method: "POST",
+            url: "http://localhost:44347/send",
+            data: this.state
+        }).then((response) => {
+            if (response.data.status === 'success') {
+                alert("Message Sent.");
+                this.resetForm()
+            } else if (response.data.status === 'fail') {
+                alert("Message failed to send.")
+            }
+        })
+        */
     }
 
     resetForm() {
@@ -88,7 +105,7 @@ export class Contact extends Component {
             city: "",
             usState: "",
             zipCode: "",
-            message: "",
+            message: ""
         })
     }
 

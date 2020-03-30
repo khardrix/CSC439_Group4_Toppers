@@ -3,10 +3,10 @@
 export class TopLinks extends Component {
     render() {
         return (
-            <nav class="topLinks">
-                <div class="menuDropdown">
-                    <button class="btnMenuDropdown">Menu</button>
-                    <div class="menuDropdownContent">
+            <nav className="topLinks">
+                <div className="menuDropdown">
+                    <button className="btnMenuDropdown">Menu</button>
+                    <div className="menuDropdownContent">
                         <a href="index.html">Home</a>
                         <a href="newmenuitems.html">New Menu Items</a>
                         <a href="pizzas.html">Pizzas</a>

@@ -4,10 +4,10 @@ export class BottomLinks extends Component {
     render() {
         return (
             <footer>
-                <nav class="bottomLinks">
-                    <div class="careerDropdown">
-                        <button class="btnCareerDropdown">Career</button>
-                        <div class="careerDropdownContent">
+                <nav className="bottomLinks">
+                    <div className="careerDropdown">
+                        <button className="btnCareerDropdown">Career</button>
+                        <div className="careerDropdownContent">
                             <a href="https://www.toppers.com/Portals/0/Documents/Toppers_Application.pdf" target="_blank">Apply</a>
                             <a href="http://www.toppersfranchise.com/" target="_blank">Own a Franchise</a>
                         </div>
