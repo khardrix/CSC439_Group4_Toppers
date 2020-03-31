@@ -20,9 +20,31 @@ import './index.css'
 export default class App extends Component {
     static displayName = App.name;
 
+    constructor(props) {
+        super(props);
+
+        // define the initial / default state in the constructor
+        this.state = {
+            isLoggedIn: false,
+            username: 'Guest',
+            shoppingCart: [],
+        }
+
+        this.onLoggedIn = this.onLoggedIn.bind(this);
+    }
+
+    // add event handlers ... to CHANGE state using react's "setState" method
+    onLoggedIn = () => {
+        if (this.state.isLoggedIn) {
+            this.setState({
+
+            });
+        }
+    }
+
     render() {
         return (
-            <Layout>
+            <Layout state={this.state}>
                 <Route exact path='/' component={Deals} />
 
                 <Route exact path='/home' component={Home} />
@@ -32,7 +54,7 @@ export default class App extends Component {
                 <Route path='/about.html' component={About} />
                 <Route path='/giftcards.html' component={GiftCards} />
                 <Route path='/contact.html' component={Contact} />
-                <Route path='/login.html' component={Login} />
+                <Route path='/login.html' render={props => (<Login {...props} state={this.state} onLoggedIn={this.onLoggedIn} />)} />
             </Layout>
         );
     }

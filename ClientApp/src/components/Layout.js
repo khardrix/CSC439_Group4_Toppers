@@ -10,6 +10,7 @@ export class Layout extends Component {
     static displayName = Layout.name;
 
     render() {
+        const { isLoggedIn, username, shoppingCart } = this.props.state;
         return (
             <div>
                 <LoginBox />

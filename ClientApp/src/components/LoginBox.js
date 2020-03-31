@@ -1,16 +1,19 @@
 ﻿import React, { Component } from 'react';
-import ReactDom from 'react-dom';
 
-
-function LoggedIn(props) {
-    const isLoggedIn = props.isSignedIn
-}
 
 export class LoginBox extends Component {
+
     render() {
+        const { isLoggedIn, username, photoURL } = this.props;
+
         return (
             <div id="loginBox">
-                <a href="login.html"><p>Login</p></a>
+                {!isLoggedIn &&
+                    <a href="login.html"><p>Login</p></a>
+                }
+                {isLoggedIn &&
+                    <a href="logout.html"><p>Logout</p></a>
+                }
             </div>
         );
     }
