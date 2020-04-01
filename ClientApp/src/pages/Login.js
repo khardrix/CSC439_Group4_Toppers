@@ -8,6 +8,7 @@ firebase.initializeApp({
 })
 
 export class Login extends Component {
+
     state = { isSignedIn: false }
     uiConfig = {
         signInFlow: "popup",
@@ -26,11 +27,15 @@ export class Login extends Component {
     componentDidMount = () => {
         firebase.auth().onAuthStateChanged(user => {
             this.setState({ isSignedIn: !!user })
+            { this.props.onLoggedIn(this.state.isSignedIn, firebase.auth().currentUser.displayName, firebase.auth().currentUser.photoURL) }
             console.log("user", user)
         })
     }
 
     render() {
+
+        const { onLoggedIn } = this.props;
+
         return (
             <div id="LoginContainer">
                 {this.state.isSignedIn ? (

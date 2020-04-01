@@ -28,18 +28,19 @@ export default class App extends Component {
             isLoggedIn: false,
             username: 'Guest',
             shoppingCart: [],
+            photoSrc: ''
         }
 
         this.onLoggedIn = this.onLoggedIn.bind(this);
     }
 
     // add event handlers ... to CHANGE state using react's "setState" method
-    onLoggedIn = () => {
-        if (this.state.isLoggedIn) {
-            this.setState({
-
-            });
-        }
+    onLoggedIn = (value, userName, photoURL) => {
+        this.setState({
+            isLoggedIn: value,
+            username: userName,
+            photoSrc: photoURL
+        })
     }
 
     render() {
@@ -59,3 +60,5 @@ export default class App extends Component {
         );
     }
 }
+
+

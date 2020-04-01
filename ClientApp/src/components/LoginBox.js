@@ -3,16 +3,30 @@
 
 export class LoginBox extends Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     render() {
-        const { isLoggedIn, username, photoURL } = this.props;
+        const { isLoggedIn, username, photoSrc } = this.props;
 
         return (
             <div id="loginBox">
                 {!isLoggedIn &&
-                    <a href="login.html"><p>Login</p></a>
+                    <div>
+                        <p>{username}</p>
+                        <a href="login.html"><button>Login</button></a>
+                    </div>
                 }
                 {isLoggedIn &&
-                    <a href="logout.html"><p>Logout</p></a>
+                    <div>
+                        <p>{username}</p>
+                        <img
+                            src={photoSrc}
+                            alt="profile picture"
+                        />
+                        <a href="index.html"><button>Logout</button></a>
+                    </div>
                 }
             </div>
         );
