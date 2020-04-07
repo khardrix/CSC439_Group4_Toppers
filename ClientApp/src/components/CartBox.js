@@ -3,12 +3,19 @@
 
 export class CartBox extends Component {
     render() {
+        const { username, photoSrc } = this.props;
+
         return (
             <div className="divCartBox">
-                <h3>Items: </h3>
-                <h4>Subtotal: </h4>
-                <h5>Tax: </h5>
-                <h6>Total: </h6>
+                <h3>{username}</h3>
+                <img
+                    src={photoSrc}
+                    alt="profile picture"
+                />
+                <p>Items: </p>
+                <p>Subtotal: </p>
+                <p>Tax: </p>
+                <p>Total: </p>
             </div>
         );
     }

@@ -12,9 +12,11 @@ export class Layout extends Component {
 
     render() {
         const { isLoggedIn, username, photoSrc } = this.props.state;
+        console.log(this.props)
         return (
             <div>
-                {this.props.isLoggedIn ? <CartBox /> : <LoginBox isLoggedIn={isLoggedIn} username={username} photoSrc={photoSrc} />}
+                {!isLoggedIn && <LoginBox username={username} />}
+                {isLoggedIn && <CartBox username={username} photoSrc={photoSrc} />}
                 <Header />
                 <TopLinks />
                 <Container>
@@ -26,3 +28,8 @@ export class Layout extends Component {
         );
     }
 }
+
+/*
+ * LINE 18: Just above the "<Header />"
+ * {this.props.isLoggedIn ? <CartBox /> : <LoginBox isLoggedIn={isLoggedIn} username={username} photoSrc={photoSrc} />}
+ */

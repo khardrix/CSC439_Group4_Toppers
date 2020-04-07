@@ -24,6 +24,24 @@ body {
     background-color: white;
 }
 
+#loginBox img {
+    width: 3vw;
+    height: 3vw;
+    margin-right: 2vw;
+}
+
+.divCartBox {
+    width: 18vw;
+    height: 8vw;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    border: .2vw solid red;
+    text-align: center;
+    background-color: white;
+}
+
 header {
     display: inline-block;
     width: 100%;
@@ -616,9 +634,3 @@ footer {
 }
 /******************************************** LOGIN PAGE CSS: END ***********************************************/
 /****************************************************************************************************************/
-
-#loginBox img {
-    width: 3vw;
-    height: 3vw;
-    margin-right: 2vw;
-}
