@@ -1,7 +1,8 @@
 ﻿import React, { Component } from 'react';
-
+import firebase from 'firebase';
 
 export class CartBox extends Component {
+
     render() {
         const { username, photoSrc } = this.props;
 
@@ -12,6 +13,9 @@ export class CartBox extends Component {
                     src={photoSrc}
                     alt="profile picture"
                 />
+                <div>
+                    <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
+                </div>
                 <p>Items: </p>
                 <p>Subtotal: </p>
                 <p>Tax: </p>

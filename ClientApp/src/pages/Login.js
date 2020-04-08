@@ -1,6 +1,8 @@
 ﻿import React, { Component } from 'react';
 import firebase from 'firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+// import { LoginBox } from '../components/LoginBox';
+// import { CartBox } from '../components/CartBox';
 
 firebase.initializeApp({
     apiKey: "AIzaSyAhvAcTSrnhLRJobA-4kwS2zLyYPvE__ms",
@@ -8,7 +10,16 @@ firebase.initializeApp({
 })
 
 export class Login extends Component {
-
+    /*
+    constructor(props) {
+        super(props);
+        console.log(props);
+        this.state = {
+            isSignedIn: false
+        };
+        this.updateSignInStatus = this.updateSignInStatus.bind(this);
+    }
+    */
     state = { isSignedIn: false }
     uiConfig = {
         signInFlow: "popup",
@@ -31,7 +42,18 @@ export class Login extends Component {
             console.log("user", user)
         })
     }
-
+    /*
+    updateSignInStatus() {
+        if (isSignedIn) {
+            this.setState = () => firebase.auth().signOut()
+        } else {
+            <StyledFirebaseAuth
+                uiConfig={this.uiConfig}
+                firebaseAuth={firebase.auth()}
+            />
+        }
+    }
+    */
     render() {
 
         const { onLoggedIn } = this.props;
@@ -60,3 +82,9 @@ export class Login extends Component {
         )
     }
 }
+
+/*
+ Just inside return <div>
+<LoginBox updateStatus={this.updateSignInStatus} />
+<CartBox updateStatus={this.updateSignInStatus} />
+ */
